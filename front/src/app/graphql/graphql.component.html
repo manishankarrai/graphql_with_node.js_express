@@ -1,0 +1,41 @@
+<!-- graphql.component.html -->
+<div *ngIf="!editBoolean" class="container">
+    <h2>Create New Post</h2>
+    <form (ngSubmit)="addData()">
+      <label>Title:</label>
+      <input class="form-control" type="text" [(ngModel)]="title" name="title" required>
+      <br>
+      <label>Description:</label>
+      <textarea class="form-control" [(ngModel)]="description" name="description" required></textarea>
+      <br>
+      <button class="btn btn-primary" type="submit">Create Post</button>
+    </form>
+  </div>
+  
+  <div *ngIf="editBoolean" class="container">
+    <h2>Edit Post</h2>
+    <form (ngSubmit)="updatePost()">
+      <label>Title:</label>
+      <input class="form-control" type="text" [(ngModel)]="title_" name="title" required>
+      <br>
+      <label>Description:</label>
+      <textarea class="form-control" [(ngModel)]="description_" name="description" required></textarea>
+      <br>
+      <button class="btn btn-primary" type="submit">Update Post</button>
+    </form>
+  </div>
+  
+  <div>
+    <h2>All Posts</h2>
+    <button class="btn btn-success" (click)="getData()">Refresh</button>
+  
+    <ul>
+      <li *ngFor="let post of posts">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.description }}</p>
+        <button class="btn btn-success" (click)="editPost(post.id)">Edit</button>
+        <button class="btn btn-danger" (click)="deletePost(post.id)">Delete</button>
+      </li>
+    </ul>
+  </div>
+  
