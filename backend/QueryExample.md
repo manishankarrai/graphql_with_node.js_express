@@ -1,4 +1,5 @@
-<h3>get query</h3><code>
+<h3>get query</h3>
+<code>
 query {
    getAllPosts {
       id  , 
