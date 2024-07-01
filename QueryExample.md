@@ -1,4 +1,4 @@
-**get query**
+<h3>get query</h3><code>
 query {
    getAllPosts {
       id  , 
@@ -6,7 +6,7 @@ query {
       description
    }
 }
-**post query**
+</code><h3>post query</h3><code>
 
 mutation {
     createPost (
@@ -21,7 +21,7 @@ mutation {
  
 
 
-**update  query**
+</code><h3>update  query</h3><code>
 mutation {
     updatePost( id : "668265ce0acbd24a833c575b" , 
      post : {
@@ -34,9 +34,9 @@ mutation {
 }
 
 
-**delete query**
+</code><h3>delete query</h3><code>
 
 mutation {
    deletePost( id : "668265d80acbd24a833c575d")
 }
-
+</code>
