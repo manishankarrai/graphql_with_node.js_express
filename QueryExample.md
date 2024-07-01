@@ -18,7 +18,7 @@ mutation {
       id , title , description
     }
 }
-
+ 
 
 
 **update  query**
